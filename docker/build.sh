@@ -3,7 +3,7 @@ echo "Building the TRG docker image..."
 # get directory of this script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-# receive argumnt --ros (noetic or foxy)
+# receive argumnt --ros (noetic or humble)
 while [[ "$#" -gt 0 ]]; do
   case $1 in
     --ros)
@@ -20,8 +20,8 @@ done
 # change to the directory of the dockerfile depending on the distro
 if [ "$ROS_DISTRO" == "noetic" ]; then
     cd $DIR/../docker/ros1/noetic
-elif [ "$ROS_DISTRO" == "foxy" ]; then
-    cd $DIR/../docker/ros2/foxy
+elif [ "$ROS_DISTRO" == "humble" ]; then
+    cd $DIR/../docker/ros2/humble
 fi
 
 # build the docker image

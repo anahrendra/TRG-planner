@@ -40,8 +40,8 @@ xhost +local:docker
 # Based on the ROS distro, run the appropriate docker-compose file
 if [ "$ROS_DISTRO" == "noetic" ]; then
     docker compose -f docker/ros1/noetic/docker-compose.yml -p "$PROJECT_NAME" up
-elif [ "$ROS_DISTRO" == "foxy" ]; then
-    docker compose -f docker/ros2/foxy/docker-compose.yml -p "$PROJECT_NAME" up
+elif [ "$ROS_DISTRO" == "humble" ]; then
+    docker compose -f docker/ros2/humble/docker-compose.yml -p "$PROJECT_NAME" up
 fi
 # docker compose -f docker/ros1/noetic/docker-compose.yml -p "$PROJECT_NAME" up
 

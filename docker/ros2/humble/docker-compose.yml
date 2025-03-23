@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   trg:
-    image: trg:foxy
+    image: trg:humble
     runtime: nvidia
     stdin_open: true # equivalent to -it
     tty: true
