@@ -3,7 +3,7 @@ echo "Building the TRG docker image..."
 # get directory of this script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-# receive argumnt --ros (noetic or humble)
+# receive argument --ros (noetic or humble)
 while [[ "$#" -gt 0 ]]; do
   case $1 in
     --ros)
