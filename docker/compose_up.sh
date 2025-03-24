@@ -43,7 +43,6 @@ if [ "$ROS_DISTRO" == "noetic" ]; then
 elif [ "$ROS_DISTRO" == "humble" ]; then
     docker compose -f docker/ros2/humble/docker-compose.yml -p "$PROJECT_NAME" up
 fi
-# docker compose -f docker/ros1/noetic/docker-compose.yml -p "$PROJECT_NAME" up
 
 # ===== Cleanup =====
 xhost -local:docker
